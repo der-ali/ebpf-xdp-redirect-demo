@@ -163,6 +163,7 @@ int xdp_prog_func(struct xdp_md *ctx) {
 
   ip->check = iph_csum(ip);
   udp->check = udp_checksum(ip, udp, data_end);
+  bpf_printk("udp checksum %x", udp->check); 
 
   bpf_printk("destination interface index %d", bk->ifindex);
 
