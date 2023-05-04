@@ -1,2 +1,3 @@
 bpf_bpfe*.o
-demo
+ebpf-xdp
+
