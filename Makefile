@@ -8,7 +8,7 @@ all: build
 clean:
 	rm -f bpf_bpfeb.o
 	rm -f bpf_bpfel.o
-	rm -f demo
+	rm -f ebpf-xdp
 
 .PHONY: generate
 generate: export BPF_CLANG := $(CLANG)
@@ -18,4 +18,4 @@ generate:
 
 .PHONY: build
 build: generate
-	go build -o demo
+	go build -o ebpf-xdp
